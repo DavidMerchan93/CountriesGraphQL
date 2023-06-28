@@ -1,4 +1,4 @@
-package com.david.countriesgraphql.ui.theme
+package com.david.countriesgraphql.presentation.theme
 
 import android.app.Activity
 import android.os.Build
