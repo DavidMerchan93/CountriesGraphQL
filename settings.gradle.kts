@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "CountriesGraphQL"
-include ':app'
+include(":app")
