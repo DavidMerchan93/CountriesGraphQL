@@ -1,16 +1,14 @@
 package com.david.countriesgraphql
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import com.david.countriesgraphql.presentation.theme.CountriesGraphQLTheme
-import com.david.countriesgraphql.presentation.view.CountriesScreen
+import com.david.countriesgraphql.presentation.view.CountryDetailModal
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -25,11 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,
                 ) {
-                    val context = LocalContext.current
-
-                    CountriesScreen() {
-                        Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
-                    }
+                    CountryDetailModal()
                 }
             }
         }

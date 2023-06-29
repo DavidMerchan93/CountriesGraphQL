@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -76,21 +77,24 @@ private fun CountryItem(
 ) {
     Row(
         modifier = modifier.fillMaxWidth().padding(16.dp),
+        verticalAlignment = Alignment.CenterVertically,
     ) {
         Text(
             text = countryItem.emoji,
-            fontSize = 24.sp,
+            fontSize = 28.sp,
         )
         Spacer(modifier = Modifier.width(16.dp))
         Column {
             Text(
                 text = countryItem.name,
                 fontSize = 20.sp,
+                color = MaterialTheme.colorScheme.primary,
             )
             Spacer(modifier = Modifier.width(16.dp))
             Text(
                 text = countryItem.code,
                 fontSize = 16.sp,
+                color = MaterialTheme.colorScheme.tertiary,
             )
         }
     }
